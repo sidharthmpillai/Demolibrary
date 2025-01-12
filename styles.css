@@ -1,0 +1,265 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px; /* Added padding for better hover effect */
+    border-radius: 5px; /* Added for consistent styling */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    background-color: #45a049; /* Change background color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.hero {
+    background-color: #009688;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero .button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .button:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content {
+    font-size: 17px;
+}
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.libpic {
+    display: block;
+    margin: 20px auto; /* Centering the image */
+    max-width: 100%; /* Ensures responsive behavior */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.books {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color:#009688 ;
+}
+
+.book {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+}
+
+.book h3 {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Added border for better visuals */
+    border-radius: 5px; /* Added consistent rounding */
+}
+
+form button {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Consistent rounding */
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #00796B;
+}
+.header {
+    background: linear-gradient(90deg, #333, #555);
+}
+
+.book {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/* Main Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative; /* To position dropdown items relative to the parent */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* Position below the parent item */
+    left: 0;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hidden by default */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    display: block; /* Make each item fill the dropdown width */
+    padding: 10px 15px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        text-align: center;
+    }
+
+    .books {
+        flex-direction: column; /* Stack book items */
+        align-items: center;
+    }
+
+    .book {
+        width: 90%; /* Adjust book width for smaller screens */
+    }
+
+    .hero h2 {
+        font-size: 24px; /* Adjust font size */
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .dropdown-menu {
+        position: static; /* Stack the dropdown items below the parent */
+        box-shadow: none; /* Remove shadow */
+    }
+
