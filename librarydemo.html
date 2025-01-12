@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Community Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Library Katilapoovam</h1>
+        </div>
+        <nav>
+            <ul>
+                <div>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </div>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <div class="hero">
+            <h2>Welcome to Your Library Katilapoovam</h2>
+            <p>Explore, Learn, and Discover New Worlds Through Books</p>
+            <a href="#catalog" class="button">Browse Catalog</a>
+        </div>
+    </section>
+    <img src="media/images/libcover.jpg" class="libpic" alt="lib">
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p class="content"><b>Welcome to Library Katilapoovam, your gateway to a world of knowledge, imagination, and discovery. Established with a vision to foster a love for reading, learning, and creativity, our library serves as a vibrant hub for readers, researchers, and dreamers alike.This Library is dedicated to all passionate readers out there.</b></p>
+    </section>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="#catalog">Book Class</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#fiction">Fiction</a></li>
+                    <li><a href="#nonfiction">Non-fiction</a></li>
+                    <li><a href="#kids">Children's Books</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Catalog Section -->
+    <section id="catalog">
+        <h2>Book Catalog</h2>
+        <div class="books">
+            <div class="book">
+                <img src="media/images/book1.webp" alt="Book 1">
+                <h3>Book Title 1</h3>
+                <p>Author: Olivia Wilson</p>
+            </div>
+            <div class="book">
+                <img src="media/images/book2.webp" alt="Book 2">
+                <h3>Book Title 2</h3>
+                <p>Author: Estelle Darcy</p>
+            </div>
+            <div class="book">
+                <img src="media/images/book3.jpg" alt="Book 3">
+                <h3>Book Title 3</h3>
+                <p>Author: Charles Dickens</p>
+            </div>
+        </div>
+        <a href="#" class="button">View More</a>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>Book Club: October 20, 2024</li>
+            <li>Reading Competition 9 December, 2024</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <script>
+    document.querySelector('form').addEventListener('submit', (e) => {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+    
+        if (!name || !email || !message) {
+            e.preventDefault(); // Prevent form submission
+            alert('Please fill out all fields.');
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            e.preventDefault();
+            alert('Please enter a valid email address.');
+        }
+    });
+    document.querySelectorAll('.dropdown > a').forEach((dropdownLink) => {
+    dropdownLink.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default link behavior
+        const dropdownMenu = dropdownLink.nextElementSibling;
+
+        // Toggle the visibility of the dropdown menu
+        dropdownMenu.style.display =
+            dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+});
+
+    </script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy;Library. All rights reserved.</p>
+    </footer>
+</body>
+</html>
